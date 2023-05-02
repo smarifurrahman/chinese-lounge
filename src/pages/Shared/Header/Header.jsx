@@ -25,7 +25,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login" className="btn">Login</Link>
+                <Link to="/login" className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">Login</Link>
                 <img className='w-[40px]' src="https://cdn-icons-png.flaticon.com/512/164/164600.png?w=740&t=st=1683040299~exp=1683040899~hmac=3e533d18def3d14c1a6ea92cbeb11f5e3672a892eecb494732ebb44d669f5c53" alt="" />
             </div>
         </div>

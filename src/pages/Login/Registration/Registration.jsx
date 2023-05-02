@@ -36,11 +36,11 @@ const Registration = () => {
                             <input type="text" name='password' placeholder="password" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-4">
-                            <button className="btn btn-primary">Register</button>
+                            <button className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end">Register</button>
                         </div>
                         <div>
                             <p className="label-text-alt mt-2 text-center">Already have an account ?
-                                <span> <Link className="link link-hover text-primary font-semibold" to="/login">Login</Link> </span>
+                                <span> <Link className="link link-hover text-green-start font-semibold" to="/login">Login</Link> </span>
                             </p>
                         </div>
                     </form>

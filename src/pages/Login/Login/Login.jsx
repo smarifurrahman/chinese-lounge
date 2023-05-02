@@ -27,11 +27,11 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-4">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn  bg-green-start hover:bg-green-end border-green-start hover:border-green-end">Login</button>
                         </div>
                         <div>
                             <p className="label-text-alt mt-2 text-center">Don’t have An account ?
-                                <span> <Link className="link link-hover text-primary font-semibold" to="/registration">Register</Link> </span>
+                                <span> <Link className="link link-hover text-green-start font-semibold" to="/registration">Register</Link> </span>
                             </p>
                         </div>
                     </form>
