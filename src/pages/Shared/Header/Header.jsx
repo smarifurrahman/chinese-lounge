@@ -19,7 +19,7 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/blogs">Blog</Link></li>
                     <li><Link>Shop</Link></li>
                     <li><Link>Contact Us</Link></li>
                 </ul>
