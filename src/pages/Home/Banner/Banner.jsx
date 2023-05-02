@@ -29,23 +29,59 @@ const Banner = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
                 <img src={banner2} className="w-full h-[70vh] object-cover" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
+                <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white w-[85%] mx-auto">
+                    <div className='w-1/2'>
+                        <h1 className='text-7xl font-bold'>Lorem ipsum.</h1>
+                        <p className='font-medium my-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi eaque quas deleniti amet dolorem quis odio blanditiis reiciendis nesciun</p>
+                        <a className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">
+                            View Recipe
+                            <span className='ml-2'>
+                                <HiArrowRight />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div className="absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
+                    <a href="#slide1" className="btn btn-circle bg-transparent border-white hover:bg-green-start hover:border-green-start">❮</a>
+                    <a href="#slide3" className="btn btn-circle bg-transparent border-white hover:bg-green-start hover:border-green-start">❯</a>
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
                 <img src={banner3} className="w-full h-[70vh] object-cover" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
+                <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white w-[85%] mx-auto">
+                    <div className='w-1/2'>
+                        <h1 className='text-7xl font-bold'>Lorem ipsum.</h1>
+                        <p className='font-medium my-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi eaque quas deleniti amet dolorem quis odio blanditiis reiciendis nesciun</p>
+                        <a className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">
+                            View Recipe
+                            <span className='ml-2'>
+                                <HiArrowRight />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div className="absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
+                    <a href="#slide2" className="btn btn-circle bg-transparent border-white hover:bg-green-start hover:border-green-start">❮</a>
+                    <a href="#slide4" className="btn btn-circle bg-transparent border-white hover:bg-green-start hover:border-green-start">❯</a>
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
                 <img src={banner4} className="w-full h-[70vh] object-cover" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
+                <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white w-[85%] mx-auto">
+                    <div className='w-1/2'>
+                        <h1 className='text-7xl font-bold'>Lorem ipsum.</h1>
+                        <p className='font-medium my-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi eaque quas deleniti amet dolorem quis odio blanditiis reiciendis nesciun</p>
+                        <a className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">
+                            View Recipe
+                            <span className='ml-2'>
+                                <HiArrowRight />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div className="absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
+                    <a href="#slide3" className="btn btn-circle bg-transparent border-white hover:bg-green-start hover:border-green-start">❮</a>
+                    <a href="#slide1" className="btn btn-circle bg-transparent border-white hover:bg-green-start hover:border-green-start">❯</a>
                 </div>
             </div>
         </div>
