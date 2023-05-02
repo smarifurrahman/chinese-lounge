@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -17,14 +18,14 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Shop</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link>Shop</Link></li>
+                    <li><Link>Contact Us</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                <Link to="/login" className="btn">Login</Link>
                 <img className='w-[40px]' src="https://cdn-icons-png.flaticon.com/512/164/164600.png?w=740&t=st=1683040299~exp=1683040899~hmac=3e533d18def3d14c1a6ea92cbeb11f5e3672a892eecb494732ebb44d669f5c53" alt="" />
             </div>
         </div>
