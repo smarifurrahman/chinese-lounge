@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className='bg-footer-dark text-white'>
-            <footer className="footer py-10 w-[90%] mx-auto">
+            <footer className="footer py-10 w-[85%] mx-auto">
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Recipes</a>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer w-[90%] mx-auto py-10 border-t border-light-dark">
+            <footer className="footer w-[85%] mx-auto py-10 border-t border-light-dark">
                 <div className="items-center grid-flow-col">
                     <p>Chinese Lounge. <br />Providing best food recipe is our promise.</p>
                 </div>
