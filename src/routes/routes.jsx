@@ -3,6 +3,7 @@ import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login/Login";
 import Registration from "../pages/Login/Registration/Registration";
+import ChefRecipes from "../pages/ChefRecipes/ChefRecipes";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
             {
                 path: "registration",
                 element: <Registration></Registration>
+            },
+            {
+                path: "recipes/:id",
+                element: <ChefRecipes></ChefRecipes>,
+                loader: ({ params }) => { return params.id }
             }
         ]
     },
