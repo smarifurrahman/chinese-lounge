@@ -32,12 +32,14 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <img className='w-[45px] h-[45px] rounded-full object-cover align-top' src={user.photoURL} alt="" /> :
+                        <div style={{ "--tooltip-color": "#85B72C", "--tooltip-text-color": "#FFFFFF" }} className='tooltip tooltip-left' data-tip={user.displayName}>
+                            <img className='w-[45px] h-[45px] rounded-full object-cover align-top hover:tooltip' src={user.photoURL} alt="user photo" />
+                        </div> :
 
                         <Link to="/login" className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">Login</Link>
                 }
             </div>
-        </div>
+        </div >
     );
 };
 
