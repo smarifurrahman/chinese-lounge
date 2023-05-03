@@ -5,7 +5,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const Registration = () => {
     const [error, setError] = useState('');
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -42,6 +42,18 @@ const Registration = () => {
                 setError(error.message);
             })
 
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.error(error.message);
+                setError(error.message);
+            })
     }
 
     return (
@@ -87,7 +99,7 @@ const Registration = () => {
                         <p className='text-center mt-2'>or Continue with</p>
                         <div className='flex gap-3 justify-center'>
                             <div className="form-control mt-4">
-                                <button className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
+                                <button onClick={handleGoogleSignIn} className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
                                     <FaGoogle className='text-2xl' />
                                 </button>
                             </div>

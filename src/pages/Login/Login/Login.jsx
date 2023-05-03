@@ -6,7 +6,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 const Login = () => {
     const [error, setError] = useState('');
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     console.log('login page location', location);
@@ -28,6 +28,18 @@ const Login = () => {
                 console.log(loggedUser);
                 form.reset();
                 navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.error(error.message);
+                setError(error.message);
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
             })
             .catch(error => {
                 console.error(error.message);
@@ -69,7 +81,7 @@ const Login = () => {
                         <p className='text-center mt-2'>or Continue with</p>
                         <div className='flex gap-3 justify-center'>
                             <div className="form-control mt-4">
-                                <button className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
+                                <button onClick={handleGoogleSignIn} className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
                                     <FaGoogle className='text-2xl' />
                                 </button>
                             </div>
