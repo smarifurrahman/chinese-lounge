@@ -5,9 +5,10 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
     const { user } = useContext(AuthContext);
+    console.log(user)
 
     return (
-        <div className="navbar bg-base-100 w-[85%] mx-auto py-5">
+        <div className="navbar bg-base-100 w-[85%] mx-auto py-5 flex items-center">
             <div className="navbar-start">
                 {/* <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,7 +32,7 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <img className='w-[40px]' src="https://cdn-icons-png.flaticon.com/512/164/164600.png?w=740&t=st=1683040299~exp=1683040899~hmac=3e533d18def3d14c1a6ea92cbeb11f5e3672a892eecb494732ebb44d669f5c53" alt="" /> :
+                        <img className='w-[45px] h-[45px] rounded-full object-cover align-top' src={user.photoURL} alt="" /> :
 
                         <Link to="/login" className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">Login</Link>
                 }
