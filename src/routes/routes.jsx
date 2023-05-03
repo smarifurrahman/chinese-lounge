@@ -3,7 +3,7 @@ import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login/Login";
 import Registration from "../pages/Login/Registration/Registration";
-import ChefRecipes from "../pages/ChefRecipes/ChefRecipes";
+import ChefRecipes from "../pages/ChefRecipes/ChefRecipes/ChefRecipes";
 import Blogs from "../pages/Blogs/Blogs";
 
 const router = createBrowserRouter([

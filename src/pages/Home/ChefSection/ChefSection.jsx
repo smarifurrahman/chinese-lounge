@@ -10,7 +10,7 @@ const ChefSection = () => {
             .then(res => res.json())
             .then(data => setChefs(data))
             .catch(error => console.error(error))
-    })
+    }, [])
 
     return (
         <div className='mt-20 w-[85%] mx-auto'>
