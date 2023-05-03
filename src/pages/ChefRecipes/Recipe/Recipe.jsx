@@ -6,12 +6,12 @@ import { notifySuccess } from '../../Shared/Toaster/Toaster';
 
 const Recipe = ({ recipe }) => {
 
-    const { recipe_name, ingredients, cooking_method, rating } = recipe;
+    const { recipe_name, recipe_picture, ingredients, cooking_method, rating } = recipe;
 
     console.log(recipe)
     return (
         <div className="card min-w-[300px] bg-base-100 shadow-xl">
-            <figure><img src={'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80'} alt="Shoes" /></figure>
+            <figure><img className='h-[250px] w-full object-cover' src={recipe_picture} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="font-bold text-xl text-center">{recipe_name}</h2>
 
