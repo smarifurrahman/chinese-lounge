@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ActiveRoute from '../ActiveRoute/ActiveRoute';
 
 const Header = () => {
     return (
@@ -14,12 +15,12 @@ const Header = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div> */}
-                <a className="normal-case text-xl">Chinese Lounge</a>
+                <Link to="/" className="normal-case text-xl">Chinese Lounge</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/blogs">Blog</Link></li>
+                    <li><ActiveRoute to="/">Home</ActiveRoute></li>
+                    <li><ActiveRoute to="/blogs">Blog</ActiveRoute></li>
                     <li><Link>Shop</Link></li>
                     <li><Link>Contact Us</Link></li>
                 </ul>
