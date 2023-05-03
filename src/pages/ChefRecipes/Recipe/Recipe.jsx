@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Recipe = () => {
+const Recipe = ({ recipe }) => {
+
+    const { recipe_name, ingredients, cooking_method, rating } = recipe;
+
+    console.log(recipe)
     return (
         <div>
             <h2>Recipe</h2>
