@@ -8,4 +8,6 @@
 
 #root {
     font-family: 'Roboto Slab', serif;
+    max-width: 1440px;
+    margin: 0 auto;
 }
