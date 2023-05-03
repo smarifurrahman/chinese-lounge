@@ -21,7 +21,7 @@ const ChefRecipes = () => {
     // console.log(chef, allRecipes)
 
     return (
-        <div>
+        <div className='grid grid-cols-3 gap-6 w-[85%] mx-auto'>
             {
                 allRecipes.map(recipe => <Recipe
                     key={recipe.id}
