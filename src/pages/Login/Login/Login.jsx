@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     return (
@@ -26,11 +27,25 @@ const Login = () => {
                                 <Link to="#" className="label-text-alt link link-hover">Forgot password?</Link>
                             </label>
                         </div>
-                        <div className="form-control mt-4">
+                        <div className="form-control mt-4 mb-6">
                             <button className="btn  bg-green-start hover:bg-green-end border-green-start hover:border-green-end">Login</button>
                         </div>
+                        <hr />
+                        <p className='text-center mt-2'>or Continue with</p>
+                        <div className='flex gap-3 justify-center'>
+                            <div className="form-control mt-4">
+                                <button className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
+                                    <FaGoogle className='text-2xl' />
+                                </button>
+                            </div>
+                            <div className="form-control mt-4">
+                                <button className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
+                                    <FaGithub className='text-2xl' />
+                                </button>
+                            </div>
+                        </div>
                         <div>
-                            <p className="label-text-alt mt-2 text-center">Don’t have An account ?
+                            <p className="label-text-alt mt-4 text-center">Don’t have An account ?
                                 <span> <Link className="link link-hover text-green-start font-semibold" to="/registration">Register</Link> </span>
                             </p>
                         </div>
