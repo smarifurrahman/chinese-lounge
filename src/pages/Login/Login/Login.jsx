@@ -7,7 +7,7 @@ const Login = () => {
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form className="card-body p-12">
+                    <form className="card-body p-12 pb-0">
                         <div className="text-center">
                             <h1 className="text-3xl font-bold">Login your account</h1>
                             <hr className='mt-5' />
@@ -30,6 +30,8 @@ const Login = () => {
                         <div className="form-control mt-4 mb-6">
                             <button className="btn  bg-green-start hover:bg-green-end border-green-start hover:border-green-end">Login</button>
                         </div>
+                    </form>
+                    <div className='px-12 pb-12'>
                         <hr />
                         <p className='text-center mt-2'>or Continue with</p>
                         <div className='flex gap-3 justify-center'>
@@ -49,7 +51,7 @@ const Login = () => {
                                 <span> <Link className="link link-hover text-green-start font-semibold" to="/registration">Register</Link> </span>
                             </p>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
