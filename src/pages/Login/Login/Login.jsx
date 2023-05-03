@@ -6,7 +6,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 const Login = () => {
     const [error, setError] = useState('');
 
-    const { signIn, googleSignIn } = useContext(AuthContext);
+    const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     console.log('login page location', location);
@@ -37,6 +37,18 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn()
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.error(error.message);
+                setError(error.message);
+            })
+    }
+    
+    const handleGithubSignIn = () => {
+        githubSignIn()
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
@@ -86,7 +98,7 @@ const Login = () => {
                                 </button>
                             </div>
                             <div className="form-control mt-4">
-                                <button className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
+                                <button onClick={handleGithubSignIn} className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
                                     <FaGithub className='text-2xl' />
                                 </button>
                             </div>

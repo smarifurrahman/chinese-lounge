@@ -5,7 +5,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const Registration = () => {
     const [error, setError] = useState('');
-    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn, githubSignIn } = useContext(AuthContext);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -46,6 +46,18 @@ const Registration = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn()
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.error(error.message);
+                setError(error.message);
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        githubSignIn()
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
@@ -104,7 +116,7 @@ const Registration = () => {
                                 </button>
                             </div>
                             <div className="form-control mt-4">
-                                <button className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
+                                <button onClick={handleGithubSignIn} className="btn text-green-start hover:text-white bg-white hover:bg-green-start border-green-start hover:border-green-start px-6">
                                     <FaGithub className='text-2xl' />
                                 </button>
                             </div>
