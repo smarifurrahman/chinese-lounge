@@ -4,7 +4,7 @@ import ActiveRoute from '../ActiveRoute/ActiveRoute';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     console.log(user)
 
     return (
@@ -25,15 +25,21 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><ActiveRoute to="/">Home</ActiveRoute></li>
                     <li><ActiveRoute to="/blogs">Blog</ActiveRoute></li>
-                    <li><Link>Shop</Link></li>
-                    <li><Link>Contact Us</Link></li>
+                    {
+                        user ?
+                            <li><ActiveRoute to="/registration">Register</ActiveRoute></li> :
+                            <li><ActiveRoute to="/login">Login</ActiveRoute></li>
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
                 {
                     user ?
-                        <div style={{ "--tooltip-color": "#85B72C", "--tooltip-text-color": "#FFFFFF" }} className='tooltip tooltip-left' data-tip={user.displayName}>
-                            <img className='w-[45px] h-[45px] rounded-full object-cover align-top hover:tooltip' src={user.photoURL} alt="user photo" />
+                        <div className='flex items-center gap-3'>
+                            <div style={{ "--tooltip-color": "#85B72C", "--tooltip-text-color": "#FFFFFF" }} className='tooltip tooltip-left' data-tip={user.displayName}>
+                                <img className='w-[45px] h-[45px] rounded-full object-cover align-top hover:tooltip' src={user.photoURL} alt="user photo" />
+                            </div>
+                            <button onClick={logOut} className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">Logout</button>
                         </div> :
 
                         <Link to="/login" className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end px-6">Login</Link>
