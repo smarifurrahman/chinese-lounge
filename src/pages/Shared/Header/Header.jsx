@@ -26,9 +26,8 @@ const Header = () => {
                     <li><ActiveRoute to="/">Home</ActiveRoute></li>
                     <li><ActiveRoute to="/blogs">Blog</ActiveRoute></li>
                     {
-                        user ?
-                            <li><ActiveRoute to="/registration">Register</ActiveRoute></li> :
-                            <li><ActiveRoute to="/login">Login</ActiveRoute></li>
+                        user ? "" :
+                            <li><ActiveRoute to="/registration">Register</ActiveRoute></li>
                     }
                 </ul>
             </div>
