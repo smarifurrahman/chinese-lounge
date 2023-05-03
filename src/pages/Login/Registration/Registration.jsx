@@ -4,7 +4,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Registration = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -19,10 +19,18 @@ const Registration = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                updateUser(result.user, name, photo)
+                    .then(() => {
+                        console.log('profile updated');
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
             })
             .catch(error => {
                 console.log(error);
             })
+
     }
 
     return (
@@ -56,7 +64,7 @@ const Registration = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-4 mb-6">
                             <button className="btn bg-green-start hover:bg-green-end border-green-start hover:border-green-end">Register</button>

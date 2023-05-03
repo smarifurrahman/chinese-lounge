@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../../providers/AuthProvider';
@@ -9,6 +9,8 @@ const Login = () => {
     const location = useLocation();
     console.log('login page location', location);
     const from = location.state?.from?.pathname || '/';
+
+    const emailRef = useRef();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -41,7 +43,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" />
+                            <input type="text" name='email' placeholder="email" className="input input-bordered" ref={emailRef} />
                         </div>
                         <div className="form-control">
                             <label className="label">
