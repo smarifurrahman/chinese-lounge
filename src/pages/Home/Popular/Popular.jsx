@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 
 const Popular = () => {
     const [allRecipes, setAllRecipes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch("https://chinese-lounge-server-smarifurrahman.vercel.app/recipes/2")
@@ -11,9 +12,16 @@ const Popular = () => {
             .then(data => {
                 const selected = data.recipes.slice(1, 4);
                 setAllRecipes(selected)
+                setLoading(false)
             })
             .catch(error => console.error(error))
     }, [])
+
+    if (loading) {
+        return <div className='w-[85%] mx-auto mt-10 text-center'>
+            <progress className="progress w-56"></progress>
+        </div>
+    }
 
     return (
         <div className='mt-20 w-[85%] mx-auto'>

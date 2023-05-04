@@ -7,6 +7,7 @@ import ChefBanner from '../ChefBanner/ChefBanner';
 const ChefRecipes = () => {
     const [chef, setChef] = useState([]);
     const [allRecipes, setAllRecipes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const recipeId = useLoaderData();
 
@@ -16,11 +17,18 @@ const ChefRecipes = () => {
             .then(data => {
                 setChef(data)
                 setAllRecipes(data.recipes)
+                setLoading(false)
             })
             .catch(error => console.error(error))
     }, [])
 
     // console.log(chef, allRecipes)
+
+    if (loading) {
+        return <div className='w-[85%] mx-auto mt-10 text-center'>
+            <progress className="progress w-56"></progress>
+        </div>
+    }
 
     return (
         <div className='w-[85%] mx-auto'>

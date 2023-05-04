@@ -4,13 +4,23 @@ import { data } from 'autoprefixer';
 
 const ChefSection = () => {
     const [chefs, setChefs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://chinese-lounge-server-smarifurrahman.vercel.app/chefs')
             .then(res => res.json())
-            .then(data => setChefs(data))
+            .then(data => {
+                setChefs(data)
+                setLoading(false)
+            })
             .catch(error => console.error(error))
     }, [])
+
+    if (loading) {
+        return <div className='w-[85%] mx-auto mt-10 text-center'>
+            <progress className="progress w-56"></progress>
+        </div>
+    }
 
     return (
         <div className='mt-20 w-[85%] mx-auto'>
