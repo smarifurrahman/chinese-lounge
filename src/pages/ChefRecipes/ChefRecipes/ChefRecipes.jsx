@@ -35,7 +35,8 @@ const ChefRecipes = () => {
             <ChefBanner
                 chef={chef}
             ></ChefBanner>
-            <div className='grid grid-cols-3 gap-6 mt-20'>
+            <hr className='border-green-start' />
+            <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-16'>
                 {
                     allRecipes.map(recipe => <Recipe
                         key={recipe.id}

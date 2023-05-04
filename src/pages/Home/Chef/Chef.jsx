@@ -7,10 +7,10 @@ const Chef = ({ chef }) => {
     const { id, chef_name, chef_picture, years_of_experience, num_recipes, likes } = chef;
 
     return (
-        <div className="card card-side bg-base-100 shadow-2xl">
+        <div className="card card-side bg-base-100 shadow-2xl grid grid-cols-2">
             <figure>
-                <LazyLoad className='w-[230px] object-cover' height={300}>
-                    <img className='w-[230px] h-[300px] object-cover' src={chef_picture} alt="Movie" />
+                <LazyLoad className='w-full object-cover' height={300}>
+                    <img className='w-full h-[300px] object-cover' src={chef_picture} alt="Movie" />
                 </LazyLoad>
             </figure>
             <div className="card-body">
