@@ -7,7 +7,7 @@ const Blog = ({ blog }) => {
 
     return (
         <div className='border border-deep-gray rounded-lg p-9'>
-            <h5 className='mb-2 font-bold text-lg'>{id}. {question}</h5>
+            <h5 className='mb-2 font-bold text-lg text-green-start'>{id}. {question}</h5>
             <p className='text-gray text-justify'><span className='font-bold'>Answer: </span>{answer}</p>
         </div>
     );

@@ -19,7 +19,7 @@ const Header = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div> */}
-                <Link to="/" className="normal-case text-xl">Chinese Lounge</Link>
+                <Link to="/" className="normal-case text-[21px] hover:text-green-start">Chinese Lounge</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
