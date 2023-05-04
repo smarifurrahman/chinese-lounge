@@ -6,6 +6,7 @@ import Registration from "../pages/Login/Registration/Registration";
 import ChefRecipes from "../pages/ChefRecipes/ChefRecipes/ChefRecipes";
 import Blogs from "../pages/Blogs/Blogs";
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "recipes/:id",
-                element: <ChefRecipes></ChefRecipes>,
+                element: <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
                 loader: ({ params }) => { return params.id }
             },
             {
