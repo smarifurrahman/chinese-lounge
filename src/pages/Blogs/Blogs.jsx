@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Blog from './Blog/Blog';
+import { FaFileDownload } from "react-icons/fa";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -25,6 +26,13 @@ const Blogs = () => {
         <div className='w-[85%] mx-auto'>
             <div className='text-center py-14'>
                 <h2 className='text-dark hover:text-green-start text-4xl font-bold mb-3 font-playfair'>Blogs</h2>
+            </div>
+            <div className='flex justify-end mb-6'>
+                <div className='inline-block'>
+                    <div className='bg-green-start px-4 py-1 text-white rounded-md flex items-center gap-2 hover:bg-green-end cursor-pointer'>
+                        <span>Save as pdf</span>
+                        <span><FaFileDownload /></span></div>
+                </div>
             </div>
             <div className='flex flex-col gap-6'>
                 {

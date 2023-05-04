@@ -16,7 +16,7 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li><ActiveRoute to="/">Home</ActiveRoute></li>
-                    <li><ActiveRoute to="/blogs">Blog</ActiveRoute></li>
+                    <li><ActiveRoute to="/blogs">Blogs</ActiveRoute></li>
                     {
                         user ? "" :
                             <li><ActiveRoute to="/registration">Register</ActiveRoute></li>
@@ -28,7 +28,7 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><ActiveRoute to="/">Home</ActiveRoute></li>
-                    <li><ActiveRoute to="/blogs">Blog</ActiveRoute></li>
+                    <li><ActiveRoute to="/blogs">Blogs</ActiveRoute></li>
                     {
                         user ? "" :
                             <li><ActiveRoute to="/registration">Register</ActiveRoute></li>
