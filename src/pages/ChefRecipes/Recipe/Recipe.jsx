@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Rating from 'react-rating';
 import { HiOutlineStar, HiStar } from "react-icons/hi";
 import { FaCheck } from "react-icons/fa";
 import { notifySuccess } from '../../Shared/Toaster/Toaster';
 
 const Recipe = ({ recipe }) => {
+    const [show, setShow] = useState(true);
 
     const { recipe_name, recipe_picture, ingredients, cooking_method, rating } = recipe;
 
@@ -36,7 +37,10 @@ const Recipe = ({ recipe }) => {
                 </div>
 
                 <div className="card-actions justify-end">
-                    <div onClick={() => notifySuccess('Added to favorite successfully!')} className="badge badge-outline bg-green-start p-2.5 text-white cursor-pointer">Add to Favorite</div>
+                    <button onClick={() => {
+                        notifySuccess('Added to favorite successfully!');
+                        setShow(false);
+                    }} className={`badge badge-outline ${show ? "bg-green-start" : "bg-gray"} p-2.5 text-white`} disabled={!show} >Add to Favorite</button>
                 </div>
             </div>
         </div>

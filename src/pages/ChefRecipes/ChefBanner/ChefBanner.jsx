@@ -14,7 +14,7 @@ const ChefBanner = ({ chef }) => {
                 <div className="card-body">
                     <div>
                         <h2 className="card-title font-playfair text-2xl font-bold hover:text-green-start mb-2">{chef_name}</h2>
-                        <div className='text-lg'>
+                        <div className='text-dark'>
                             <p><span className='font-bold'>Bio:</span> {description}</p>
                             <p><span className='font-bold'>Likes:</span> {likes}</p>
                             <p className='my-1'><span className='font-bold'>Recipes:</span> {num_recipes}</p>
