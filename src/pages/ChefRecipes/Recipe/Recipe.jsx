@@ -4,6 +4,8 @@ import { HiOutlineStar, HiStar } from "react-icons/hi";
 import { FaCheck } from "react-icons/fa";
 import { notifySuccess } from '../../Shared/Toaster/Toaster';
 
+import LazyLoad from 'react-lazy-load';
+
 const Recipe = ({ recipe }) => {
     const [show, setShow] = useState(true);
 
@@ -12,7 +14,11 @@ const Recipe = ({ recipe }) => {
     console.log(recipe)
     return (
         <div className="card min-w-[300px] bg-base-100 shadow-xl">
-            <figure><img className='h-[250px] w-full object-cover' src={recipe_picture} alt="Shoes" /></figure>
+            <figure>
+                <LazyLoad className='w-full object-cover' height={250}>
+                    <img className='h-[250px] w-full object-cover' src={recipe_picture} alt="Shoes" />
+                </LazyLoad>
+            </figure>
             <div className="card-body">
                 <h2 className="font-bold text-xl text-center">{recipe_name}</h2>
 

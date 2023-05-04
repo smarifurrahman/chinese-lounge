@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiArrowRight } from "react-icons/hi";
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 const Chef = ({ chef }) => {
@@ -7,7 +8,11 @@ const Chef = ({ chef }) => {
 
     return (
         <div className="card card-side bg-base-100 shadow-2xl">
-            <figure><img className='w-[230px] h-[300px] object-cover' src={chef_picture} alt="Movie" /></figure>
+            <figure>
+                <LazyLoad className='w-[230px] object-cover' height={300}>
+                    <img className='w-[230px] h-[300px] object-cover' src={chef_picture} alt="Movie" />
+                </LazyLoad>
+            </figure>
             <div className="card-body">
                 <div>
                     <h2 className="card-title font-playfair text-2xl font-bold hover:text-green-start mb-2">{chef_name}</h2>
