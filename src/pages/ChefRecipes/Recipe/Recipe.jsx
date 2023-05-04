@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Rating from 'react-rating';
-import { HiOutlineStar, HiStar } from "react-icons/hi";
 import { FaCheck } from "react-icons/fa";
 import { notifySuccess } from '../../Shared/Toaster/Toaster';
 
 import LazyLoad from 'react-lazy-load';
+
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 
 const Recipe = ({ recipe }) => {
     const [show, setShow] = useState(true);
@@ -38,7 +39,8 @@ const Recipe = ({ recipe }) => {
                 <h4 className='font-semibold mt-4'>Cooking Method: </h4>
                 <p className='text-justify'>{cooking_method}</p>
 
-                <div className='mt-4'>
+                <div className='mt-4 flex gap-3 items-center'>
+                    <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
                     <span>{rating}</span>
                 </div>
 
