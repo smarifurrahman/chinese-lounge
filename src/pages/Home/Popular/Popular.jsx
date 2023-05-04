@@ -6,7 +6,7 @@ const Popular = () => {
     const [allRecipes, setAllRecipes] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/recipes/2")
+        fetch("https://chinese-lounge-server-smarifurrahman.vercel.app/recipes/2")
             .then(res => res.json())
             .then(data => {
                 const selected = data.recipes.slice(1, 4);

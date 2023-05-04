@@ -11,7 +11,7 @@ const ChefRecipes = () => {
     const recipeId = useLoaderData();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/recipes/${recipeId}`)
+        fetch(`https://chinese-lounge-server-smarifurrahman.vercel.app/recipes/${recipeId}`)
             .then(res => res.json())
             .then(data => {
                 setChef(data)
