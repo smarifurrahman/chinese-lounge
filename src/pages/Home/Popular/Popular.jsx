@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from '../../ChefRecipes/Recipe/Recipe';
 import { ToastContainer } from 'react-toastify';
+import Spinner from '../../Shared/Spinner/Spinner';
 
 const Popular = () => {
     const [allRecipes, setAllRecipes] = useState([]);
@@ -18,9 +19,7 @@ const Popular = () => {
     }, [])
 
     if (loading) {
-        return <div className='w-[85%] mx-auto mt-10 text-center'>
-            <progress className="progress w-56"></progress>
-        </div>
+        return <Spinner></Spinner>;
     }
 
     return (

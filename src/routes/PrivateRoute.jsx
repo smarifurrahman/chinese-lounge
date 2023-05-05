@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+import Spinner from '../pages/Shared/Spinner/Spinner';
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
@@ -8,9 +9,7 @@ const PrivateRoute = ({ children }) => {
     console.log(location);
 
     if (loading) {
-        return <div className='w-[85%] mx-auto mt-10 text-center'>
-            <progress className="progress w-56"></progress>
-        </div>
+        return <Spinner></Spinner>
     }
 
     if (user) {

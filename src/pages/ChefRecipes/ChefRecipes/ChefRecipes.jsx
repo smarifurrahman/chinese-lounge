@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Recipe from '../Recipe/Recipe';
 import { ToastContainer } from 'react-toastify';
 import ChefBanner from '../ChefBanner/ChefBanner';
+import Spinner from '../../Shared/Spinner/Spinner';
 
 const ChefRecipes = () => {
     const [chef, setChef] = useState([]);
@@ -25,9 +26,7 @@ const ChefRecipes = () => {
     // console.log(chef, allRecipes)
 
     if (loading) {
-        return <div className='w-[85%] mx-auto mt-10 text-center'>
-            <progress className="progress w-56"></progress>
-        </div>
+        return <Spinner></Spinner>;
     }
 
     return (

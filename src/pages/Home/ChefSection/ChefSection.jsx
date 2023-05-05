@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Chef from '../Chef/Chef';
 import { data } from 'autoprefixer';
+import Spinner from '../../Shared/Spinner/Spinner';
 
 const ChefSection = () => {
     const [chefs, setChefs] = useState([]);
@@ -17,9 +18,7 @@ const ChefSection = () => {
     }, [])
 
     if (loading) {
-        return <div className='w-[85%] mx-auto mt-10 text-center'>
-            <progress className="progress w-56"></progress>
-        </div>
+        return <Spinner></Spinner>;
     }
 
     return (

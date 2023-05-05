@@ -3,6 +3,7 @@ import Blog from './Blog/Blog';
 import { FaFileDownload } from "react-icons/fa";
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import Spinner from '../Shared/Spinner/Spinner';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -33,9 +34,7 @@ const Blogs = () => {
     }
 
     if (loading) {
-        return <div className='w-[85%] mx-auto mt-10 text-center'>
-            <progress className="progress w-56"></progress>
-        </div>
+        return <Spinner></Spinner>;
     }
 
     return (
