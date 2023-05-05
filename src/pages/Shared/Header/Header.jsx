@@ -15,12 +15,13 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><ActiveRoute to="/">Home</ActiveRoute></li>
-                    <li><ActiveRoute to="/blogs">Blogs</ActiveRoute></li>
-                    {
-                        user ? "" :
-                            <li><ActiveRoute to="/registration">Register</ActiveRoute></li>
-                    }
+                        <li><ActiveRoute to="/">Home</ActiveRoute></li>
+                        <li><ActiveRoute to="/blogs">Blogs</ActiveRoute></li>
+                        {
+                            user ? "" :
+                                <li><ActiveRoute to="/registration">Register</ActiveRoute></li>
+                        }
+                        <li><ActiveRoute to="/contact">Contact Us</ActiveRoute></li>
                     </ul>
                 </div>
                 <Link to="/" className="normal-case text-xl sm:text-[21px] hover:text-green-start">Chinese Lounge</Link>
@@ -33,6 +34,7 @@ const Header = () => {
                         user ? "" :
                             <li><ActiveRoute to="/registration">Register</ActiveRoute></li>
                     }
+                    <li><ActiveRoute to="/contact">Contact Us</ActiveRoute></li>
                 </ul>
             </div>
             <div className="navbar-end">

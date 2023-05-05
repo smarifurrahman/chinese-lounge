@@ -7,6 +7,7 @@ import ChefRecipes from "../pages/ChefRecipes/ChefRecipes/ChefRecipes";
 import Blogs from "../pages/Blogs/Blogs";
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: "blogs",
                 element: <Blogs></Blogs>
+            },
+            {
+                path: "contact",
+                element: <Contact></Contact>
             }
         ]
     },
