@@ -25,7 +25,7 @@ const Popular = () => {
     return (
         <div className='mt-20 w-[85%] mx-auto'>
             <div className='text-center mb-8'>
-                <h2 className='text-dark hover:text-green-start text-4xl font-bold mb-3 font-playfair'>Our Popular Recipes</h2>
+                <h2 className='text-dark hover:text-green-start text-4xl font-bold mb-3 font-playfair'>Popular Recipes</h2>
                 <p className='text-gray font-medium'>Explore our most popular recipes</p>
             </div>
             <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-20'>
