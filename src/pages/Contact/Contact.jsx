@@ -29,7 +29,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="p-2 w-full">
-                            <button className="flex mx-auto text-white bg-green-start border-0 py-2 px-8 focus:outline-none hover:bg-green-end rounded text-lg">Button</button>
+                            <button className="flex mx-auto text-white bg-green-start border-0 py-2 px-8 focus:outline-none hover:bg-green-end rounded text-lg">Submit</button>
                         </div>
                         <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                             <a className="text-green-start">smarif.cse@gmail.com</a>
